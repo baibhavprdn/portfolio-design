@@ -1,0 +1,58 @@
+Creating a new local repository:
+    -the local repository is the copy of the project you get in distributed version control softwares like Git
+    -to create a local repository, create a new folder and inside the folder run the git bash : Git Bash Here 
+    -run $ git init which initializes the local repository for git
+
+Connecting the local repository to the remote one:
+    -$ git remote add origin "repository link here which can be downloaded from the repo you created in git hub (to paste is shift+ins)" 
+
+Pulling from the remote repository
+    -$ git pull origin master
+    -used to pull all files from the master repository in github
+
+Checking the status of the local repo with git status   
+    -$ git status
+    -used to check which branch you're on as well as check whether any files are not indexed 
+
+Making Changes
+    -has an intermediate layer between the workspace and the local repository
+    -to make changes, you need to add files to the index first which is the layer
+    -the files which are not in index prevents commits to the local repository
+
+Commits:
+    -a commit is a snapshot or an object which is a version of the project at the specified time
+    
+Untracked files: -files which are not added to the index 
+    -use $ git add file_name.txt
+
+Committing changes:
+    -$ git commit -m "a message here describing what the new changes are in this commit"
+
+    -adding multiple files to the index: $ git add -A
+    -$ git commit -a -m "message here describing the changes in this commit"
+
+    -also works in adding changes to files in the index which are already being watched/tracked
+    -does not work for untracked files!
+
+Git log: $ git log
+    -see all the commits and activities
+    -press q to log out
+
+Creating branches:
+    -$ git branch branch_name
+    -originates from the master branch and has all the files
+
+Switching branches:
+    -$ git checkout branch_name
+    -used to switch to next branch
+
+Merging:
+    -it is important to merge the created different branches back into a main master branch 
+    -the master branch is always the production ready 
+
+Git Stashes- something to break off the branch stores it for later connection when the separate project/ branch is ready
+
+Merging branch changes: git merge firstbranch
+    -always checkout into the destination branch; you need to be in the destination branch for this to work properly
+
+Listing all the available files: $ ls
