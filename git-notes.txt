@@ -49,10 +49,23 @@ Switching branches:
 Merging:
     -it is important to merge the created different branches back into a main master branch 
     -the master branch is always the production ready 
+    -$ git merge file_name 
+    -merged with the current branch you're in
 
 Git Stashes- something to break off the branch stores it for later connection when the separate project/ branch is ready
 
 Merging branch changes: git merge firstbranch
     -always checkout into the destination branch; you need to be in the destination branch for this to work properly
 
+Git fetch vs pull:
+    -pull pulls the files into the same workflow
+    -fetch into a different workflow which requires merging to see the changes into the local repo
+    -git pull= git fetch+ git merge
+
 Listing all the available files: $ ls
+
+Rebasing: similar to merging
+    -however, in merging the new commit has two parent commits
+    -in rebasing the newBranch commit history is placed into the master
+        -makes a much cleaner project history   
+        -reduces the number of branches
