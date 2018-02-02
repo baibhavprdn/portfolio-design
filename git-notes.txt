@@ -69,3 +69,5 @@ Rebasing: similar to merging
     -in rebasing the newBranch commit history is placed into the master
         -makes a much cleaner project history   
         -reduces the number of branches
+    -git rebase source_branch
+    -rebases the source-branch to the current branch 
