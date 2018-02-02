@@ -16,7 +16,7 @@ Checking the status of the local repo with git status
 
 Making Changes
     -has an intermediate layer between the workspace and the local repository
-    -to make changes, you need to add files to the index first which is the layer
+    -to make changes, you need to add files to the index first which is the layer; also called the staging area
     -the files which are not in index prevents commits to the local repository
 
 Commits:
@@ -33,6 +33,10 @@ Committing changes:
 
     -also works in adding changes to files in the index which are already being watched/tracked
     -does not work for untracked files!
+
+    -if mistakenly tried to commit without adding a message
+        -type ESC :wq
+        -ps Fuck vim xD
 
 Git log: $ git log
     -see all the commits and activities
@@ -71,3 +75,18 @@ Rebasing: similar to merging
         -reduces the number of branches
     -git rebase source_branch
     -rebases the source-branch to the current branch 
+
+Pushing changes:
+    -pushing projects into github means that others can access the files as well.
+    -in order to prevent unauthorised pushes into the main remote repository in github we use SSH to connect the local repo with the remote one
+    -$ ssh-keygen
+    -to see the ssh key write
+    -$ cat address of local git repo
+    -go to github>settings>SSH and GPG keys> add the new one with title 
+    -then in gitbash
+        -ssh -T git@github.com
+
+    -to ensure the local branch in the local repo is created into the remote branch in the remote repository
+    -$ git push origin branch_name 
+    -for the master we use
+        -$ git push origin master
